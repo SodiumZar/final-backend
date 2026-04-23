@@ -8,10 +8,10 @@ Aplikasi web full-stack untuk mengelola UKM kampus, termasuk keanggotaan, event,
 
 | Nama |
 
-Kaunang, Gabriel Nehemia
-Kandou, Nazarya Exelsis
-Oroh, Injilio
-Pieter, Marcovan Filippo Leanro
+| Kaunang, Gabriel Nehemia |
+| Kandou, Nazarya Exelsis |
+| Oroh, Injilio |
+| Pieter, Marcovan Filippo Leanro |
 
 ## 📝 Lisensi
 
