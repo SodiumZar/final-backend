@@ -1,0 +1,54 @@
+# environment variables
+.env
+
+# File executable hasil build
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Binary output (nama project)
+ukm-management
+main
+
+# Folder build output
+bin/
+build/
+
+# Folder vendor jika menggunakan go mod vendor
+vendor/
+
+*.test
+*.out
+coverage.html
+coverage.txt
+
+# Log files
+*.log
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (GoLand, dll)
+.idea/
+*.iml
+*.iws
+
+# Vim
+*.swp
+*.swo
