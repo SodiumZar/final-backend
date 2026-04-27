@@ -62,7 +62,7 @@ RUN chown appuser:appgroup /app/main
 USER appuser
 
 # Expose port yang digunakan aplikasi
-EXPOSE 8080
+EXPOSE 8000
 
 # Perintah untuk menjalankan aplikasi
 CMD ["./main"]
