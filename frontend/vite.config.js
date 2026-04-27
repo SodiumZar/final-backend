@@ -38,8 +38,6 @@ export default defineConfig({
   },
 
   resolve: {
-    // Alias path agar import lebih mudah
-    // Contoh: import Button from '@/components/Button'
     alias: {
       '@': '/src',
     }
