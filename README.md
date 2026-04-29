@@ -172,7 +172,7 @@ Isi variabel berikut di `backend/.env`:
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net
 DB_NAME=ukm_management
 JWT_SECRET=isi_dengan_string_acak_yang_panjang_dan_aman
-APP_PORT=8080
+APP_PORT=8000
 FRONTEND_URL=http://localhost:5173
 ```
 
@@ -197,7 +197,7 @@ notepad frontend\.env  # Windows
 
 Isi variabel berikut di `frontend/.env`:
 ```env
-VITE_API_URL=http://localhost:8080/api
+VITE_API_URL=http://localhost:8000/api
 VITE_APP_NAME=UKM Management
 VITE_APP_VERSION=1.0.0
 ```
@@ -217,7 +217,7 @@ go run main.go
 
 # Output yang diharapkan:
 # ✅ Terhubung ke MongoDB!
-# 🚀 Server berjalan di port 8080
+# 🚀 Server berjalan di port 8000
 ```
 
 ### Terminal 2 — Frontend

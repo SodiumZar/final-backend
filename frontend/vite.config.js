@@ -2,45 +2,43 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
+// Konfigurasi Vite untuk project React
 export default defineConfig({
-  plugins: [
-    react(), 
-    tailwindcss(),
-  ],
-
+  plugins: [react(), tailwindcss()],
+  
+  // Konfigurasi server development
   server: {
-    // Port yang digunakan saat development
     port: 5173,
-
-    // Konfigurasi proxy untuk menghindari masalah CORS saat development
-    // Setiap request ke /api akan diteruskan ke backend Go
+    // Proxy untuk menghindari CORS saat development lokal
     proxy: {
       '/api': {
-        // Alamat backend Go
-        target: 'http://localhost:8080',
-
-        // Ubah origin header agar sesuai dengan target
+        target: 'http://localhost:8000',
         changeOrigin: true,
-
-        // Contoh: /api/auth/login → http://localhost:8080/api/auth/login
-        // (tidak perlu rewrite karena path sudah sama)
-      }
-    }
+        secure: false,
+      },
+    },
   },
-
+  
+  // Konfigurasi build production
   build: {
-    // Folder output hasil build
     outDir: 'dist',
-
-    // Hapus folder dist sebelum build baru
-    emptyOutDir: true,
+    sourcemap: false,
+    // Pisahkan vendor chunk agar caching lebih efisien
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          store: ['zustand'],
+          ui: ['react-hot-toast', 'react-icons'],
+        },
+      },
+    },
   },
-
+  
+  // Resolve alias untuk import yang lebih bersih
   resolve: {
     alias: {
       '@': '/src',
-    }
-  }
-  
+    },
+  },
 })
